@@ -1,4 +1,5 @@
 version: "3.8"
+
 services:
   anythink-backend-node:
     build: ./backend
@@ -9,7 +10,8 @@ services:
       - NODE_ENV=development
       - PORT=3000
       - MONGODB_URI=mongodb://mongodb-node:27017/anythink-market
-      - GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN=${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}
+#      - GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN=${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}
+      - GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN='localhost:8000'
     working_dir: /usr/src
     volumes:
       - ./:/usr/src/
